@@ -1,0 +1,17 @@
+[partition = 1, ip = 172.16.0.118] [2023-02-08 14:28:01] INFO     Connected log server on 172.16.0.107:59015
+[partition = 0, ip = 172.16.0.118] [2023-02-08 14:28:01] INFO     Connected log server on 172.16.0.107:59015
+[partition = 1, ip = 172.16.0.118] Data size on worker:  49923
+[partition = 0, ip = 172.16.0.118] Data size on worker:  50025
+Evaluation results:                                                             
+num_samples: 99948
+Accuracy: 0.8572947978973389
+Precision: 0.7898339629173279
+Recall: 0.39525434374809265
+val_loss: 0.32110947912749455
+Traceback (most recent call last):                                              
+  File "pytorch_train_spark_dataframe.py", line 126, in <module>
+    est.shutdown()
+  File "/home/kai/anaconda3/envs/py378/lib/python3.7/site-packages/bigdl/orca/learn/pytorch/pytorch_pyspark_estimator.py", line 705, in shutdown
+    stop_log_server(self.log_server_thread, self.ip, self.port)
+AttributeError: 'PyTorchPySparkEstimator' object has no attribute 'port'
+Stopping orca context
